@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paika Login and Sign Up</title>
+    <link rel="stylesheet" href="./login.css">
+    <link rel="icon" href="paika.png">
+</head>
+
+<body>
+
+    <h1>Welcome To Paika</h1>
+
+
+    <!-- HINT: hover over button -->
+    <div class="c--anim-btn">
+        <span class="c-anim-btn">
+      Are you already have account? Let's login right now!
+    </span>
+        <span>
+      If you've not account yet? Let's sign up right now! 
+    </span>
+    </div>
+
+
+    <div class="login-page" action="/action_page.php" method="post">
+        <div class="form">
+            <form class="register-form">
+                <input type="text" placeholder="name" name="name" required/>
+                <input type="password" placeholder="password" name="password" required/>
+                <input type="text" placeholder="email address" required/>
+
+                <!-- <a class="button" href="file:///d:/MY%20PROJECT/Paika%20project/Paika.html/MainPaika-1.html">Create</a> -->
+
+                <button type="submit" formaction="file:///D:/MY%20PROJECT/Paika%20project/Paika.html/MainPaika-1.html">Create</button>
+
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+            </form>
+            <form class="login-form" action="/action_page.php" method="post">
+                <input type="text" placeholder="username" name="username" required/>
+                <input type="password" placeholder="password" name="password" minlength="6" maxlength="12" required/>
+
+                <button type="submit" formaction="file:///D:/MY%20PROJECT/Paika%20project/Paika.html/MainPaika-1.html">Login</button>
+
+
+                <p class="message">Not registered? <a href="#">Create an account</a></p>
+            </form>
+        </div>
+    </div>
+    <!-- Script file -->
+    <script src="./login.js"></script>
+    </div>
+
+</body>
+
+</html>

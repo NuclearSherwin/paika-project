@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Paika</title>
+    <link rel="icon" type="image/png" href="paika.png">
+    <link="stylesheet" href="style.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+        </style>
+        <script src="https://kit.fontawesome.com/823e15a3c8.js" crossorigin="anonymous"></script>
+
+        <head>
+            <style>
+
+            </style>
+        </head>
+
+        <body>
+            <div class="container">
+                <header>
+                    <img class="logo-img" src="Pics/PaikaSentences.png" alt="Paika words" width="100px" heigh="100px">
+                    <!-- Searching -->
+                    <div class="search ">
+                        <div class="icon"></div>
+                        <div class="input">
+                            <input type="text" placeholder=" What are your looking for?" id="mySearch">
+                        </div>
+                        <span class="clear" onclick="document.getElementById('mySearch').value = ''"></span>
+                    </div>
+                    <script>
+                        const icon = document.querySelector('.icon');
+                        const search = document.querySelector('.search');
+                        icon.onclick = function() {
+                            search.classList.toggle('active');
+                        }
+                    </script>
+
+                    <div class="iconsR">
+                        <div class="settingsAll" onclick="dropdownSettingAll()">
+                            <img src="Pics/settings.png" alt="Settings" srcset="" style="height: 25px; margin-right: 0;">
+                        </div>
+                        <div class="chatMode">
+                            <img src="Pics/chat.png" alt="Chatting" style="height: 25px;">
+                        </div>
+                        <div class="bell">
+                            <img src="Pics/bell.png" alt="Notifications" style="height: 25px;">
+                        </div>
+                        <div class="location">
+                            <img src="Pics/location.png" alt="Night Mode" style="height: 25px;">
+                        </div>
+                        <div class="homeReturn">
+                            <img src="Pics/home.png" alt="Home page" style="height: 25px;">
+                        </div>
+                        <!-- User logo -->
+                        <div class="user-logo" onclick="dropdownMenu()">
+                            <img src="paika.png">
+                        </div>
+                    </div>
+
+                    <!-- This is drop down when user click to their avatar -->
+                    <div class="dropdown-table">
+                        <!-- <div class="user-logo2">
+                            <img src="paika.png">
+                            <p>Pounder Of Paika</p>
+                            <a href="#">View your profile</a>
+                        </div>
+                        <div class="Feedback">
+                            <img src="Pics/warning.png">
+                            <p>Feedback</p>
+                            <a href="#">Help we improve</a>
+                        </div>
+                        <div class="three">
+                            <img src="paika.png">
+                            <p>Three</p>
+                            <a href="#">Welcome guys</a>
+                        </div> -->
+
+                        <div class="settings">
+                            <div class="head">
+                                <figure class="photo">
+                                    <img src="paika.png" style="width: 50px; height: 50px" />
+                                </figure>
+                                <div class="user_info">
+                                    <h2>Paika</h2>
+                                    <small>phongspacenasa@mail.com</small>
+                                </div>
+                                <span class="alink close">
+                                    <i class="far fa-times-circle"></i>
+                                </span>
+                            </div>
+                            <div class="body">
+                                <dl class="setting">
+                                    <dd>
+                                        <li class="setting_item">
+                                            <i class="fas fa-moon"></i>
+                                            <span class="item_options">Dark Mode</span>
+                                            <div class="switch">
+                                                <input id="dark_mode" type="checkbox" checked="checked" />
+                                                <label for="dark_mode"></label>
+                                            </div>
+                                        </li>
+                                        <li class="setting_item">
+                                            <i class="fas fa-bell"></i>
+                                            <span class="item_options">Notifications</span>
+                                            <span class="alink">
+                                                <i class="fas fa-angle-right"></i>
+                                            </span>
+                                        </li>
+                                        <li class="setting_item">
+                                            <i class="fas fa-user"></i>
+                                            <span class="item_options">Account perferences</span>
+                                            <span class="alink">
+                                                <i class="fas fa-angle-right"></i>
+                                            </span>
+                                        </li>
+                                    </dd>
+                                    <dd>
+                                        <li class="setting_item">
+                                            <i class="fas fa-shield-alt"></i>
+                                            <span class="item_options">Security</span>
+                                            <span class="alink">
+                                                <i class="fas fa-angle-right"></i>
+                                            </span>
+                                        </li>
+                                        <li class="setting_item">
+                                            <i class="fas fa-user-friends"></i>
+                                            <span class="item_options">Contact us</span>
+                                            <span class="alink">
+                                                <i class="fas fa-angle-right"></i>
+                                            </span>
+                                        </li>
+                                        <li class="setting_item">
+                                            <i class="fas fa-sign-out-alt"></i>
+                                            <span class="item_options">Sign out</span>
+                                            <span class="alink">
+                                                <i class="fas fa-angle-right"></i>
+                                            </span>
+                                        </li>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Dropdown table settings for setting -->
+                    <div class="dropdownSetting">
+                        <div class="lineSettings">
+                            <ul class="allPartsSettings">
+                                <li><img src="Pics/settings.png" alt="Account Settings" width="25px" height="25px"><span>Account Settings</span></li>
+                                <li><img src="Pics/refresh.png" alt="Changing password" width="25px" height="25px"><span>Change password</span></li>
+                                <li><img src="Pics/communities.png" alt="Contacts management" width="25px" height="25px"><span>Contacts management</span></li>
+                                <li><img src="Pics/background.png" alt="Changing Background" width="25px" height="25px"><span>Change background</span></li>
+                                <li><img src="Pics/contribution.png" alt="Contributing" width="25px" height="25px"><span>Contributing</span></li>
+                                <li><img src="Pics/rating.png" alt="rating" width="25px" height="25px"><span>Rating</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- This is for the center navigation -->
+                    <div class="navigation-center">
+                        <div class="selectingOptions">
+                            <img src="Pics/writing.png" alt="Post your status" style="height: 25px;">
+                            <img src="Pics/video.png" alt="Post your status" style="height: 25px;">
+                            <img src="Pics/heart.png" alt="Post your status" style="height: 25px;">
+                            <img src="Pics/game-controller.png" alt="Post your status" style="height: 25px;">
+                        </div>
+                    </div>
+
+                    <!-- This is the main of website -->
+                </header>
+
+                <div class="wrapped-body">
+                    <!------------------LEFT-SIDEBAR-------------------------------------------------->
+                    <div class="left-sidebar">
+                        <div class="img-links">
+                            <a href="#"><img src="Pics/earth.png" style="margin-right: 19px;">Move to Earth</a>
+                            <a href="file:///D:/MY%20PROJECT/Paika%20project/Paika.html/.vscode/PaikaMars/PaikaMars.html"><img src="Pics/mars.png" style="margin-right: 19px;">Move to Mars</a>
+                            <a href="#"><img src="Pics/group.png" style="margin-right: 19px;">Group</a>
+                            <a href="#"><img src="Pics/web-page.png" style="margin-right: 19px;">Webpages</a>
+                            <a href="#"><img src="Pics/newspaper.png" style="margin-right: 19px;">News</a>
+                            <a href="#">More</a>
+                        </div>
+                        <!--This is shortcut link or your favorite website-->
+                        <div class="shortcut-links">
+                            <p>Following</p>
+                            <a href="#"><img src="Pics/spaceX.jpg" width="55" height="40">SpaceX</a>
+                            <a href="#"><img src="Pics/tesla-roadster.jpg" width="55" height="40">Tesla Roaster</a>
+                            <a href="#"><img src="Pics/Nasa1.jpg" width="55" height="40">NASA</a>
+                            <a href="#"><img src="Pics/USA.jpg" width="55" height="40">Learning English United States</a>
+                        </div>
+                    </div>
+
+                    <!------------------=MAIN-CONTENT------------------------------------------------->
+                    <div class=main-content>
+                        <div class="story-gallery">
+                            <div class="story">
+                                <!-- <img src="Pics/writing.png">
+                                <p>Post Your Story</p>
+                                <img src="Pics/video.png" alt="Watching video" width="60">
+                                <img src="Pics/live.png" alt="Live Stream" width="60">
+                                <img src="Pics/heart.png" alt="Love history" width="60">
+                                <img src="Pics/game-controller.png" alt="Playing game" width="60"> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------------RIGHT-SIDEBAR------------------------------------------------->
+                    <div class="right-sidebar">
+                        <div class="img-linksB">
+                            <a href="#"><img src="Pics/ElonMusk.jpg" width="100" height="50px">Elon Musk and his colleagues</a>
+                        </div>
+                    </div>
+                </div>
+                <script src="dropdownsFunction.js"></script>
+            </div>
+
+        </body>
+
+</html>
